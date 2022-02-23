@@ -24,7 +24,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.footerLinks}>
-          <h4>Help & Support</h4>
+          <h4>Help &amp; Support</h4>
           <Link href='/'>
             <a>Contact Us</a>
           </Link>

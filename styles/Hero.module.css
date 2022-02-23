@@ -1,0 +1,29 @@
+.hero{
+    display: grid;
+    grid-template-rows:1fr 9fr;
+    color: white;
+    background-color: #463056;
+}
+.heroContent{
+    padding-left: 7.5%;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2rem;
+}
+.navbarItems{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15rem;
+    padding-left: 10%;
+    padding-top:2%
+}
+.navbarLinks{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 5%;
+    padding-right: 20%;
+    grid-gap: 2rem
+
+}

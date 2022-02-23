@@ -11,10 +11,12 @@ const Home: NextPage = () => {
       <Head>
         <title>Techo</title>
         <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+          </style>
         </style>
-        <meta name='description' content="Technovert's Bi-weekly Magazine" />
+        <meta name='description' content="Technovert's Bi-Monthly Magazine" />
       </Head>
       <Hero />
       <Footer />

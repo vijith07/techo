@@ -1,30 +1,32 @@
 import Link from 'next/link'
-
+import styles from '../styles/Hero.module.css'
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li className='logo'>
-          <Link href='/'>
-            <a>
-              <img src='/log.png' alt='Techo' />
-            </a>
-          </Link>
-        </li>
-        <li>
-          <a href='#'>Home</a>
-        </li>
-        <li>
-          <a href='#'>About</a>
-        </li>
-        <li>
-          <a href='#'>Contact</a>
-        </li>
-        <li>
-          <a href='#'>Subscribe</a>
-        </li>
-      </ul>
-    </nav>
+    <div className={styles.navbarItems}>
+      <div className='Brand'>
+        <Link href='/'>
+          <a>
+            <img src='/log.png' alt='Techo' />
+          </a>
+        </Link>
+      </div>
+      <div className={styles.navbarLinks}>
+        <Link href='#'>
+          <a>Home</a>
+        </Link>
+        <Link href='#'>
+          <a>About</a>
+        </Link>
+        <Link href='#'>
+          <a>Contact</a>
+        </Link>
+      </div>
+      <div className='navbarButton'>
+        <Link href='#'>
+          <a>Subscribe</a>
+        </Link>
+      </div>
+    </div>
   )
 }
 export default Navbar
