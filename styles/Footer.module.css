@@ -1,0 +1,32 @@
+.footer{
+    display:grid;
+    height: 200px;
+    width: 100%;
+    grid-template-columns: 72% 28%;   
+    color: white;
+}
+
+.footerLeft{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: #463056;
+}
+.footerRight{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-gap: 0.2rem;
+    background-color: #2e2137;
+}
+.footerLinks{
+    display: grid;
+    grid-gap: 0.2rem;
+    padding-left: 5%;
+}
+.footerLogo{
+    width: 80%;
+    height: 90%;
+}
