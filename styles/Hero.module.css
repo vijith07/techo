@@ -1,22 +1,23 @@
 .hero{
     display: grid;
     grid-template-rows:1fr 9fr;
+    height: 100%;
     color: white;
     background-color: #463056;
 }
 .heroContent{
-    padding-left: 7.5%;
-}
-.navbar{
+    padding-left: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0.2rem;
+    grid-template-columns: 2fr 1fr;
 }
 .navbarItems{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15rem;
+    width: 100%;
+    font-size: 1.5rem;
+    grid-gap: 20rem;
     padding-left: 10%;
+    padding-right: 10%;
     padding-top:2%
 }
 .navbarLinks{
@@ -25,5 +26,46 @@
     padding-left: 5%;
     padding-right: 20%;
     grid-gap: 2rem
+}
+.welcome{
+    font-size: 4rem;
+    font-weight: 300;
+    color: #D90368;
+    padding-bottom: -5rem;
+}
+.heading{
+    padding-top: -5rem;
+    font-size: 4rem;
+}
 
+.navbarButton{
+    background-color: #D90368;
+    color: white;
+    border-radius: 0.5rem;
+    border-color:#D90368 ;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.navbarButton:hover{
+    background-color: white;
+    color: #D90368;
+    border-color:#D90368 ;
+}
+/* navlinks hover lighten */
+.navbarLink:hover{
+    font-weight: lighter;
+}
+
+.latestRelease{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 7.5%;
+}
+
+.logo{
+    width: 10px;
+    height: 10px;
 }

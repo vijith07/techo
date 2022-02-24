@@ -7,8 +7,22 @@ const Hero = () => {
         <Navbar />
       </div>
       <div className={styles.heroContent}>
-        <p>Welcome</p>
-        <h1>Techovert's Bi-Monthly Magazine</h1>
+        <div className={styles.content}>
+          <p className={styles.welcome}>Welcome</p>
+          <h1 className={styles.heading}>
+            Techovert's ‏ ‏ ‏ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‏ ‏ ‏ ‏ ‏ ‏
+            ‏ ‏ ‏ ‏ ‏ ‏ ‏ ‏ ‏ Bi-Monthly Magazine
+          </h1>
+        </div>
+        <div className={styles.latestRelease}>
+          <div className={styles.latestReleaseImage}>
+            <img
+              src='/latest-release.png'
+              alt='latest release'
+              className={styles.latestReleaseImage}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )

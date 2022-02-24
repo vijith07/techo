@@ -2,6 +2,7 @@
     display:grid;
     height: 200px;
     width: 100%;
+    font-size:1.25rem;
     grid-template-columns: 72% 28%;   
     color: white;
 }
@@ -23,9 +24,14 @@
 }
 .footerLinks{
     display: grid;
+    margin-top:1.5rem;
     grid-gap: 0.2rem;
     padding-left: 5%;
-    font-weight: 200;
+    font-weight: 300;
+}
+/* footerlinks hover lighten */
+.footerLinks:hover{
+    font-weight: lighter;
 }
 .footerLogo{
     width: 80%;

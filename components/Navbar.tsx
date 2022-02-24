@@ -3,7 +3,7 @@ import styles from '../styles/Hero.module.css'
 const Navbar = () => {
   return (
     <div className={styles.navbarItems}>
-      <div className='Brand'>
+      <div className={styles.logo}>
         <Link href='/'>
           <a>
             <img src='/log.png' alt='Techo' />
@@ -12,20 +12,20 @@ const Navbar = () => {
       </div>
       <div className={styles.navbarLinks}>
         <Link href='#'>
-          <a>Home</a>
+          <a className={styles.navbarLink}>Home</a>
         </Link>
         <Link href='#'>
-          <a>About</a>
+          <a className={styles.navbarLink}>About</a>
         </Link>
         <Link href='#'>
-          <a>Contact</a>
+          <a className={styles.navbarLink}>Contact</a>
         </Link>
       </div>
-      <div className='navbarButton'>
+      <button className={styles.navbarButton}>
         <Link href='#'>
           <a>Subscribe</a>
         </Link>
-      </div>
+      </button>
     </div>
   )
 }

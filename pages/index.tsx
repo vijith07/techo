@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
+import Middle from '../components/Middle'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <meta name='description' content="Technovert's Bi-Monthly Magazine" />
       </Head>
       <Hero />
+      <Middle />
       <Footer />
     </div>
   )
