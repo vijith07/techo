@@ -28,12 +28,32 @@
     grid-gap: 0.2rem;
     padding-left: 5%;
     font-weight: 300;
+    
+}
+.footerLogoLink{
+    text-align: center;
+}
+.footerLogoLink:hover{
+    opacity: 0.6;
+    transition: opacity .25s ease-in-out;
 }
 /* footerlinks hover lighten */
-.footerLinks:hover{
-    font-weight: lighter;
+.footerLink:hover{
+    opacity: 0.6;
+    transition: opacity .25s ease-in-out;
+}
+.footerLogoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .footerLogo{
-    width: 80%;
-    height: 90%;
+    width: 50%;
+    filter: invert(1) saturate(0) brightness(1.5);
+}
+.footerSocial{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
 }

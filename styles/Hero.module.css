@@ -28,13 +28,10 @@
     grid-gap: 2rem
 }
 .welcome{
-    font-size: 4rem;
-    font-weight: 300;
     color: #D90368;
-    padding-bottom: -5rem;
+    font-weight: 300;
 }
 .heading{
-    padding-top: -5rem;
     font-size: 4rem;
 }
 
@@ -54,7 +51,8 @@
 }
 /* navlinks hover lighten */
 .navbarLink:hover{
-    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity .25s ease-in-out;
 }
 
 .latestRelease{
@@ -66,6 +64,11 @@
 }
 
 .logo{
-    width: 10px;
-    height: 10px;
+    width: 60%;
+    filter: invert() sepia(1) saturate(1.5) hue-rotate(180deg) brightness(1.5) contrast(1.5);
+}
+
+.content{
+    display: flex;
+    align-items:center;
 }

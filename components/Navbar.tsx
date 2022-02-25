@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import styles from '../styles/Hero.module.css'
+import 'bootstrap/dist/css/bootstrap.css';
+
 const Navbar = () => {
   return (
     <div className={styles.navbarItems}>
-      <div className={styles.logo}>
+      <div>
         <Link href='/'>
-          <a>
-            <img src='/log.png' alt='Techo' />
-          </a>
+            <img className={styles.logo} src='/logo.png' alt='Techo Logo' />
         </Link>
       </div>
       <div className={styles.navbarLinks}>
@@ -21,11 +21,13 @@ const Navbar = () => {
           <a className={styles.navbarLink}>Contact</a>
         </Link>
       </div>
-      <button className={styles.navbarButton}>
+      <div>
+      <button className='btn btn-dark'>
         <Link href='#'>
           <a>Subscribe</a>
         </Link>
       </button>
+      </div>
     </div>
   )
 }
