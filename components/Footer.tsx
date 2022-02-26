@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Footer = () => {
   return (
@@ -8,93 +9,93 @@ const Footer = () => {
         <div className={styles.footerLinks}>
           <h4>Discover</h4>
           <Link href='/'>
-            <a>Keka</a>
+            <a className={styles.footerLink}>Keka</a>
           </Link>
           <Link href='/'>
-            <a>Saketa</a>
+            <a className={styles.footerLink}>Saketa</a>
           </Link>
           <Link href='/'>
-            <a>Technovert</a>
+            <a className={styles.footerLink}>Technovert</a>
           </Link>
           <Link href='/'>
-            <a>Music Club</a>
+            <a className={styles.footerLink}>Music Club</a>
           </Link>
           <Link href='/'>
-            <a>Podcast</a>
+            <a className={styles.footerLink}>Podcast</a>
           </Link>
         </div>
         <div className={styles.footerLinks}>
           <h4>Help &amp; Support</h4>
           <Link href='/'>
-            <a>Contact Us</a>
+            <a className={styles.footerLink}>Contact Us</a>
           </Link>
           <Link href='/'>
-            <a>Privacy Policy</a>
+            <a className={styles.footerLink}>Privacy Policy</a>
           </Link>
           <Link href='/'>
-            <a>Inclusion and Diversity</a>
+            <a className={styles.footerLink}>Inclusion and Diversity</a>
           </Link>
           <Link href='/'>
-            <a>Report an Error</a>
+            <a className={styles.footerLink}>Report an Error</a>
           </Link>
           <Link href='/'>
-            <a>Legal</a>
+            <a className={styles.footerLink}>Legal</a>
           </Link>
         </div>
         <div className={styles.footerLinks}>
           <h4>Useful Links</h4>
           <Link href='/'>
-            <a>Press Releases</a>
+            <a className={styles.footerLink}>Press Releases</a>
           </Link>
           <Link href='/'>
-            <a>About Technovert</a>
+            <a className={styles.footerLink}>About Technovert</a>
           </Link>
           <Link href='/'>
-            <a>Production Support</a>
+            <a className={styles.footerLink}>Production Support</a>
           </Link>
           <Link href='/'>
-            <a>Documentation</a>
+            <a className={styles.footerLink}>Documentation</a>
           </Link>
           <Link href='/'>
-            <a>Newsletter</a>
+            <a className={styles.footerLink}>Newsletter</a>
           </Link>
         </div>
         <div className={styles.footerLinks}>
           <h4>Company</h4>
           <Link href='/'>
-            <a>Sales</a>
+            <a className={styles.footerLink}>Sales</a>
           </Link>
           <Link href='/'>
-            <a>Customer Reviews</a>
+            <a className={styles.footerLink}>Customer Reviews</a>
           </Link>
           <Link href='/'>
-            <a>Partner with Us</a>
+            <a className={styles.footerLink}>Partner with Us</a>
           </Link>
           <Link href='/'>
-            <a>Integrations</a>
+            <a className={styles.footerLink}>Integrations</a>
           </Link>
           <Link href='/'>
-            <a>Security</a>
+            <a className={styles.footerLink}>Security</a>
           </Link>
         </div>
       </div>
       <div className={styles.footerRight}>
-        <div className='footer-logo'>
+        <div className={styles.footerLogoContainer}>
           <Link href='/'>
-            <a>
+            <a className={styles.footerLogoLink}>
               <img className={styles.footerLogo} src='logo.png' alt='logo' />
             </a>
           </Link>
         </div>
-        <div className='footer-social'>
-          <a href='https://www.facebook.com/'>
-            <img src='../public/facebook.png' alt='facebook' />
+        <div className={styles.footerSocial}>
+          <a className={styles.footerLink} href='https://www.facebook.com/'>
+            <i className="bi bi-facebook"></i>
           </a>
-          <a href='https://www.instagram.com/'>
-            <img src='../public/instagram.png' alt='instagram' />
+          <a className={styles.footerLink} href='https://www.instagram.com/'>
+            <i className="bi bi-instagram"></i>
           </a>
-          <a href='https://www.twitter.com/'>
-            <img src='../public/twitter.png' alt='twitter' />
+          <a className={styles.footerLink} href='https://www.twitter.com/'>
+            <i className="bi bi-twitter"></i>
           </a>
         </div>
       </div>

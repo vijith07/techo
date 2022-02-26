@@ -4,14 +4,14 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.navbar}>
-        <Navbar />
+        <Navbar/>
       </div>
       <div className={styles.heroContent}>
         <div className={styles.content}>
-          <p className={styles.welcome}>Welcome</p>
           <h1 className={styles.heading}>
-            Techovert's ‏ ‏ ‏ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‏ ‏ ‏ ‏ ‏ ‏
-            ‏ ‏ ‏ ‏ ‏ ‏ ‏ ‏ ‏ Bi-Monthly Magazine
+            <span className={styles.welcome}>Welcome</span><br/>
+            Technovert's<br/>
+            Bi-Monthly Magazine
           </h1>
         </div>
         <div className={styles.latestRelease}>
