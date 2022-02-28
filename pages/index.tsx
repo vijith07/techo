@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Flipbook from '../components/Flipbook'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Middle from '../components/Middle'
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <title>Techo</title>
         <meta name='description' content="Technovert's Bi-Monthly Magazine" />
       </Head>
+      <Flipbook/>
       <Hero />
       <Middle />
       <Footer />
