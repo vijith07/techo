@@ -18,3 +18,11 @@
     padding-left: 10%;
     padding-right: 10%;
 }
+@media screen and (max-width: 600px){
+    .middleContent{
+        grid-template-columns: 1fr;
+    }
+    
+}
+    
+

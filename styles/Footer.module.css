@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    padding-left: 10%;
+    padding-left: 13%;
     padding-right: 5%;
     padding-bottom: 5%;
     background-color: #463056;
@@ -57,3 +57,21 @@
     justify-content: center;
     column-gap: 1em;
 }
+@media screen and (max-width: 600px){
+    .footer{
+        grid-template-columns: 1fr;
+       
+    }
+    .footerLeft{
+        grid-template-columns: 1fr;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .footerRight{
+        grid-template-columns: 1fr;
+        padding-bottom: 5%;
+    }
+    
+}
+    
+ 

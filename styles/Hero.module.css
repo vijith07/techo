@@ -11,44 +11,50 @@
     grid-template-columns: 2fr 1fr;
 }
 .navbarItems{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    font-size: 1.5rem;
-    grid-gap: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top:2%
+    padding-top:2% ;
 }
 .navbarLinks{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 5%;
-    padding-right: 20%;
-    grid-gap: 2rem
+    display: flex;
+    justify-content: space-around;
+    gap: 15%;
+    align-items: center;
+    
 }
 .welcome{
     color: #D90368;
     font-weight: 300;
 }
 .heading{
-    font-size: 4rem;
+    font-size: 4em;
 }
-
+.navbarLink{
+    font-size: 1.5rem;
+}
 .navbarButton{
     background-color: #D90368;
     color: white;
+    text-align: center;
     border-radius: 0.5rem;
     border-color:#D90368 ;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5rem;
     font-size: 1rem;
 }
 .navbarButton:hover{
-    background-color: white;
-    color: #D90368;
-    border-color:#D90368 ;
+    opacity: 0.8;
+    transition: opacity .25s ease-in-out;
+
 }
+.hamburgerMenu{
+    display: none;
+}
+
 /* navlinks hover lighten */
 .navbarLink:hover{
     opacity: 0.6;
@@ -64,11 +70,39 @@
 }
 
 .logo{
-    width: 60%;
+    width: 10em;
     filter: invert() sepia(1) saturate(1.5) hue-rotate(180deg) brightness(1.5) contrast(1.5);
 }
 
 .content{
     display: flex;
     align-items:center;
+}
+/* mobile responsive media query
+hamburger menu */
+@media only screen and (max-width: 768px) {
+    .heroContent{
+        grid-template-columns: 1fr;
+        font-size: 0.75rem;
+    }
+
+
+    .navbarLinks{
+        display: none;
+    }
+
+    .navbarButton{
+        display: none;
+    }
+    .hamburgerMenuItems{
+        display: none;
+    }
+    .hamburgerMenuButton{
+        display: none;
+    }
+    .hamburgerMenu{
+        display: block;  
+        font-size:2rem;
+    }
+
 }
