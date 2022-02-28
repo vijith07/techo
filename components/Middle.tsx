@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import path from 'path/posix'
 import styles from '../styles/Middle.module.css'
 import Cover from './Cover'
 const Middle = () => {
@@ -8,7 +7,7 @@ const Middle = () => {
   
   return (
     <div className={styles.middle}>
-      <h3 className={styles.title}>Previous Isuues:</h3>
+      <h3 className={styles.title}>Previous Issues</h3>
       <div className={styles.middleContent}>
         <div className={styles.middleContentItem}>
           <div className={styles.middleContentImage}>
