@@ -1,17 +1,17 @@
 import Link from 'next/link'
 import styles from '../styles/Middle.module.css'
+import Cover from './Cover'
 const Middle = () => {
+  // declare a variable path string
+  const pathString = "/4.png"
+  
   return (
     <div className={styles.middle}>
-      <h3 className={styles.title}>Previous Isuues:</h3>
+      <h3 className={styles.title}>Previous Issues</h3>
       <div className={styles.middleContent}>
         <div className={styles.middleContentItem}>
           <div className={styles.middleContentImage}>
-            <img
-              src='/previous-release.png'
-              alt='previous release'
-              className={styles.middleContentImage}
-            />
+            <Cover pathString="3.png"/>
           </div>
           <div className={styles.middleContentText}>
             <h4 className={styles.middleContentTitle}>
@@ -28,11 +28,7 @@ const Middle = () => {
         </div>
         <div className={styles.middleContentItem}>
           <div className={styles.middleContentImage}>
-            <img
-              src='/previous-release.png'
-              alt='previous release'
-              className={styles.middleContentImage}
-            />
+          <Cover pathString='2.png'/>
           </div>
           <div className={styles.middleContentText}>
             <h4 className={styles.middleContentTitle}>
@@ -49,11 +45,7 @@ const Middle = () => {
         </div>
         <div className={styles.middleContentItem}>
           <div className={styles.middleContentImage}>
-            <img
-              src='/previous-release.png'
-              alt='previous release'
-              className={styles.middleContentImage}
-            />
+          <Cover pathString='1.png'/>
           </div>
           <div className={styles.middleContentText}>
             <h4 className={styles.middleContentTitle}>
