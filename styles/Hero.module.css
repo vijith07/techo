@@ -77,7 +77,9 @@ hamburger menu */
     grid-template-columns: 1fr;
     font-size: 0.75rem;
   }
-
+  .heading{
+    font-size: 3em;
+  }
   .navbarLinks {
     display: none;
   }

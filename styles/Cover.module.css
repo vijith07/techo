@@ -7,10 +7,7 @@
 .coverBody {
   position: relative;
 }
-.coverSubtitle {
-  text-align: center;
-  font-size: 1.5em;
-}
+
 .overlayContainer {
   position: absolute;
   opacity: 0;
@@ -50,4 +47,5 @@
     flex-direction: column;
     justify-content: center;
   }
+
 }

@@ -23,8 +23,11 @@
 .middleContentText {
   padding: 5%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
   .middleContent {
     flex-direction: column;
+  }
+  .middleContentImage{
+    font-size:0.75rem;
   }
 }
