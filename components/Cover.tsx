@@ -1,5 +1,12 @@
 import styles from '../styles/Cover.module.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const PDFViewer = dynamic(() => import("../components/Flipbook"), {
+  ssr: false
+});
+
 
 interface CoverProps {
     pathString: string
@@ -7,8 +14,13 @@ interface CoverProps {
 
 
 const Cover:React.FC<CoverProps> = (props) => {
+    const handleShow = (show: boolean) => {
+        setShowModal(true);
+    }
+    const [showModal, setShowModal] = useState(false);
   return (
-    <div className={styles.coverContainer}>
+    <div className={styles.coverContainer} onClick={handleShow}>
+        <PDFViewer show={showModal}  />
         <div className={styles.coverBody}>
             <img src={props.pathString} alt="cover of the magazine issue" className={styles.coverImage}/>
             <div className={styles.overlayContainer}>

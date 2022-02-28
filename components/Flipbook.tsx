@@ -1,33 +1,70 @@
-import { useState } from 'react';
-import HTMLFlipBook from 'react-pageflip';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import styles from '../styles/Flipbook.module.css'
+import { useState } from "react";
+import HTMLFlipBook from "react-pageflip";
+import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack";
+import styles from "../styles/Flipbook.module.css";
+import workerSrc from "../pdf-worker";
+import { redirect } from "next/dist/server/api-utils";
 
-function Flipbook(props: any) {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
+pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
-    function onDocumentLoadSuccess({ numPages }) {
-      setNumPages(numPages);
+interface FlipbookProps {
+    show: boolean;
+    changeState: (show: boolean) => void;
+}
+
+
+const Flipbook:React.FC<FlipbookProps> = (props)=> {
+  const [file, setFile] = useState(
+    "https://upload.wikimedia.org/wikipedia/commons/0/0e/Space_Launch_System_%28SLS%29_Mission_Planner%27s_Guide_-_ESD_30000_Baseline_-_12Apr17_106pp_-_20170005323.pdf"
+  );
+  const [numPages, setNumPages] = useState(null);
+
+  function onFileChange(event) {
+    setFile(event.target.files[0]);
+  }
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+  function pagesList() {
+    var pages = [];
+    for (var i = 1; i <= numPages; i++) {
+      pages.push(
+        <div>
+          <Page width={500} pageNumber={i} />
+        </div>
+      );
     }
-    function pagesList(){
-      var pages = [];
-      for(var i=1; i<=numPages; i++){
-        pages.push(<div><Page width={500} pageNumber={i}/></div>);
-      }
-      return pages;
-    }
+    return pages;
+  }
+  function handleOutsideClick(event) {
+    console.log('close chesey bro');
 
-    return (
+  }
+
+  return (
+      props.show &&
+      <div
+        style={{
+          position: "fixed",
+          top: "0",
+          right: "0",
+          bottom: "0",
+          left: "0",
+          zIndex: "1000",
+        }}
+        onClick={() => handleOutsideClick()}
+      >
         <Document
-        file="./Sample.pdf"
+        file={file}
         onLoadSuccess={onDocumentLoadSuccess}
         className={styles.modal}
-        >        
-        <HTMLFlipBook width={500} height={707}>
-            {pagesList()}
+      >
+        <HTMLFlipBook width={500} height={500 * 1.3}>
+          {pagesList()}
         </HTMLFlipBook>
-        </Document>
-    );
+      </Document>
+      </div>
+
+  );
 }
 export default Flipbook;
