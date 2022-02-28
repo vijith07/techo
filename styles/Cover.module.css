@@ -1,0 +1,25 @@
+.coverContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.coverImage {
+  border-radius: 1rem;
+  width: 15em;
+  filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.5));
+}
+/* on hover create border  */
+.coverImage:hover {
+  border: solid 0.3rem #d90368;
+  border-radius: 1rem;
+  transition: border 0.25s ease-in-out;
+}
+
+/* media query 768px  */
+@media only screen and (max-width: 768px) {
+  .coverContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

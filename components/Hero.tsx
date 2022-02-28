@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import styles from '../styles/Hero.module.css'
+import Cover from './Cover'
 const Hero = () => {
   return (
     <div className={styles.hero}>
@@ -14,15 +15,7 @@ const Hero = () => {
             Bi-Monthly Magazine
           </h1>
         </div>
-        <div className={styles.latestRelease}>
-          <div className={styles.latestReleaseImage}>
-            <img
-              src='/latest-release.png'
-              alt='latest release'
-              className={styles.latestReleaseImage}
-            />
-          </div>
-        </div>
+        <Cover pathString='4.png'/>
       </div>
     </div>
   )
