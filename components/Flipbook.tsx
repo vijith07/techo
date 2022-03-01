@@ -3,7 +3,6 @@ import HTMLFlipBook from "react-pageflip";
 import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack";
 import styles from "../styles/Flipbook.module.css";
 import workerSrc from "../pdf-worker";
-import { redirect } from "next/dist/server/api-utils";
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
