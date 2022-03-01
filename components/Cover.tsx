@@ -12,7 +12,7 @@ interface CoverProps {
 }
 
 const Cover: React.FC<CoverProps> = (props) => {
-  const handleShow = (show: boolean) => {
+  const handleShow = () => {
     setShowModal(true)
   }
   const [showModal, setShowModal] = useState(false)
