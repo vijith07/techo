@@ -15,13 +15,13 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
   const [file, setFile] = useState(
     'https://upload.wikimedia.org/wikipedia/commons/1/1b/Oedipus_Rex_music.pdf'
   )
-  const [numPages, setNumPages] = useState(0)
+  const [numPages, setNumPages] = useState(null)
 
   function onFileChange(event: React.ChangeEvent<any>) {
     setFile(event.target.files[0])
   }
-  function onDocumentLoadSuccess(n: any) {
-    setNumPages(n)
+  function onDocumentLoadSuccess({ numPages }: any) {
+    setNumPages(numPages)
   }
   function pagesList(): JSX.Element[] {
     var pages = []
@@ -54,7 +54,31 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
                 bottom: 0,
               }}
             ></div>
-            <HTMLFlipBook width={500} height={500 * 1.3}>
+            <HTMLFlipBook
+              width={500}
+              height={500 * 1.3}
+              className={''}
+              style={{}}
+              startPage={0}
+              size={'fixed'}
+              minWidth={0}
+              maxWidth={0}
+              minHeight={0}
+              maxHeight={0}
+              drawShadow={true}
+              flippingTime={1000}
+              usePortrait={true}
+              startZIndex={0}
+              autoSize={true}
+              maxShadowOpacity={1}
+              showCover={true}
+              mobileScrollSupport={true}
+              clickEventForward={true}
+              useMouseEvents={true}
+              swipeDistance={30}
+              showPageCorners={false}
+              disableFlipByClick={false}
+            >
               {pagesList()}
             </HTMLFlipBook>
           </Document>
