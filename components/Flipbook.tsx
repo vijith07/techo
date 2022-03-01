@@ -3,7 +3,7 @@ import HTMLFlipBook from 'react-pageflip'
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack'
 import styles from '../styles/Flipbook.module.css'
 import workerSrc from '../pdf-worker'
-
+import { PDFDocumentProxy } from 'pdfjs-dist/types/src/display/api'
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc
 
 interface FlipbookProps {
@@ -20,7 +20,7 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
   function onFileChange(event: React.ChangeEvent<any>) {
     setFile(event.target.files[0])
   }
-  function onDocumentLoadSuccess(n: number): void {
+  function onDocumentLoadSuccess(n: any) {
     setNumPages(n)
   }
   function pagesList(): JSX.Element[] {
