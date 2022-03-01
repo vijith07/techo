@@ -12,9 +12,8 @@ interface FlipbookProps {
 }
 
 const Flipbook: React.FC<FlipbookProps> = (props) => {
-  const [file, setFile] = useState(
-    'https://upload.wikimedia.org/wikipedia/commons/1/1b/Oedipus_Rex_music.pdf'
-  )
+  // the file state can also be a link like s3 bucket link
+  const [file, setFile] = useState('./sample.pdf')
   const [numPages, setNumPages] = useState(null)
 
   function onFileChange(event: React.ChangeEvent<any>) {
@@ -59,7 +58,7 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
             ></div>
             <HTMLFlipBook
               width={500}
-              height={500 * 1.3}
+              height={500 * 1.414}
               className={''}
               style={{}}
               startPage={0}
