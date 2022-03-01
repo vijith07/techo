@@ -25,13 +25,16 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
   }
   function pagesList(): JSX.Element[] {
     var pages = []
-    for (var i = 1; i <= numPages; i++) {
-      pages.push(
-        <div>
-          <Page width={500} pageNumber={i} />
-        </div>
-      )
+    if (numPages != null) {
+      for (var i = 1; i <= numPages; i++) {
+        pages.push(
+          <div>
+            <Page width={500} pageNumber={i} />
+          </div>
+        )
+      }
     }
+
     return pages
   }
 
