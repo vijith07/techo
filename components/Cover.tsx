@@ -18,9 +18,15 @@ const Cover:React.FC<CoverProps> = (props) => {
         setShowModal(true);
     }
     const [showModal, setShowModal] = useState(false);
+    function handleOutsideClick(event) {
+        //reload the window
+        window.location.reload();
+    
+      }
+    
   return (
     <div className={styles.coverContainer} onClick={handleShow}>
-        <PDFViewer show={showModal}  />
+        <PDFViewer show={showModal}  onClose={handleOutsideClick} />
         <div className={styles.coverBody}>
             <img src={props.pathString} alt="cover of the magazine issue" className={styles.coverImage}/>
             <div className={styles.overlayContainer}>

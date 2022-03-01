@@ -9,13 +9,13 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 interface FlipbookProps {
     show: boolean;
-    changeState: (show: boolean) => void;
+    onClose: () => void;
 }
 
 
 const Flipbook:React.FC<FlipbookProps> = (props)=> {
   const [file, setFile] = useState(
-    "https://upload.wikimedia.org/wikipedia/commons/0/0e/Space_Launch_System_%28SLS%29_Mission_Planner%27s_Guide_-_ESD_30000_Baseline_-_12Apr17_106pp_-_20170005323.pdf"
+    "https://upload.wikimedia.org/wikipedia/commons/1/1b/Oedipus_Rex_music.pdf"
   );
   const [numPages, setNumPages] = useState(null);
 
@@ -37,7 +37,8 @@ const Flipbook:React.FC<FlipbookProps> = (props)=> {
     return pages;
   }
   function handleOutsideClick(event) {
-    console.log('close chesey bro');
+    //reload the window
+    window.location.reload();
 
   }
 
@@ -52,7 +53,7 @@ const Flipbook:React.FC<FlipbookProps> = (props)=> {
           left: "0",
           zIndex: "1000",
         }}
-        onClick={() => handleOutsideClick()}
+        onClick = {props.onClose}
       >
         <Document
         file={file}
