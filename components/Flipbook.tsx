@@ -13,7 +13,9 @@ interface FlipbookProps {
 
 const Flipbook: React.FC<FlipbookProps> = (props) => {
   // the file state can also be a link like s3 bucket link
-  const [file, setFile] = useState('./sample.pdf')
+  const [file, setFile] = useState(
+    'https://cdn.heyzine.com/flip-book/pdf/b12222099edfc453566ffd82a66cd9ab7411d8e9.pdf'
+  )
   const [numPages, setNumPages] = useState(null)
 
   function onFileChange(event: React.ChangeEvent<any>) {
