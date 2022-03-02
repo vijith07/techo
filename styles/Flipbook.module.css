@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   display: flex;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
   overflow: hidden;
