@@ -10,6 +10,7 @@ const PDFViewer = dynamic(() => import("../components/Flipbook"), {
 
 interface CoverProps {
     pathString: string
+    uri:string
 }
 
 
@@ -21,7 +22,7 @@ const Cover:React.FC<CoverProps> = (props) => {
     
   return (
       <div className={styles.coverContainerContainer}>
-        <PDFViewer show={modalIsOpen} onClose={()=>setModalIsOpen(false)}/>
+        <PDFViewer uri={props.uri} show={modalIsOpen} onClose={()=>setModalIsOpen(false)}/>
         <div className={styles.coverContainer} onClick={()=>setModalIsOpen(true)} >
             <div className={styles.coverBody}>
                 <img src={props.pathString} alt="cover of the magazine issue" className={styles.coverImage}/>

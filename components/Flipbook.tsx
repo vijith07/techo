@@ -8,6 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerSrc
 interface FlipbookProps {
   show: boolean
   onClose: () => void
+  uri:string
 }
 
 const Flipbook: React.FC<FlipbookProps> = (props) => {
@@ -15,7 +16,7 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
   const screenWidth = window.innerWidth;
   const pdfWidth = 500;
   const [file, setFile] = useState(
-    'https://cdn.heyzine.com/flip-book/pdf/b12222099edfc453566ffd82a66cd9ab7411d8e9.pdf'
+    props.uri
   )
   const [numPages, setNumPages] = useState(null)
   const [pdfAspect, setPdfAspect] = useState(1.4142135623730951)

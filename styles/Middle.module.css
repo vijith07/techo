@@ -16,9 +16,9 @@
   padding-bottom: 2%;
 }
 .middleContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
 }
 .middleContentText {
   padding: 5%;
@@ -27,7 +27,7 @@
   .middleContent {
     flex-direction: column;
   }
-  .middleContentImage{
-    font-size:0.75rem;
+  .middleContentImage {
+    font-size: 0.75rem;
   }
 }
