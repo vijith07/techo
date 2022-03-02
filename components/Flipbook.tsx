@@ -3,7 +3,6 @@ import HTMLFlipBook from 'react-pageflip'
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack'
 import styles from '../styles/Flipbook.module.css'
 import workerSrc from '../pdf-worker'
-import { PDFDocumentProxy } from 'pdfjs-dist/types/src/display/api'
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc
 
 interface FlipbookProps {
@@ -13,16 +12,23 @@ interface FlipbookProps {
 
 const Flipbook: React.FC<FlipbookProps> = (props) => {
   // the file state can also be a link like s3 bucket link
+  const screenWidth = window.innerWidth;
+  const pdfWidth = 500;
   const [file, setFile] = useState(
     'https://cdn.heyzine.com/flip-book/pdf/b12222099edfc453566ffd82a66cd9ab7411d8e9.pdf'
   )
   const [numPages, setNumPages] = useState(null)
+  const [pdfAspect, setPdfAspect] = useState(1.4142135623730951)
 
   function onFileChange(event: React.ChangeEvent<any>) {
     setFile(event.target.files[0])
   }
   function onDocumentLoadSuccess({ numPages }: any) {
     setNumPages(numPages)
+    console.log("HiMom")
+  }
+  const onDocumentLoadProgress = () => {
+    console.log("Loading")
   }
   function pagesList(): JSX.Element[] {
     var pages = []
@@ -30,7 +36,7 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
       for (var i = 1; i <= numPages; i++) {
         pages.push(
           <div>
-            <Page width={500} pageNumber={i} />
+            <Page width={pdfWidth} pageNumber={i} />
           </div>
         )
       }
@@ -46,6 +52,7 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
           <Document
             file={file}
             onLoadSuccess={onDocumentLoadSuccess}
+            // onLoadProgress={onDocumentLoadProgress}
             className={styles.modal}
           >
             <div
@@ -59,8 +66,8 @@ const Flipbook: React.FC<FlipbookProps> = (props) => {
               }}
             ></div>
             <HTMLFlipBook
-              width={500}
-              height={500 * 1.414}
+              width={pdfWidth}
+              height={pdfWidth * 1.414}
               className={''}
               style={{}}
               startPage={0}
