@@ -2,6 +2,7 @@ import Navbar from './Navbar'
 import styles from '../styles/Hero.module.css'
 import Cover from './Cover'
 const Hero = () => {
+  const cdnLink = 'https://cdn.heyzine.com/flip-book/pdf/b12222099edfc453566ffd82a66cd9ab7411d8e9.pdf';
   return (
     <div className={styles.hero}>
       <div className={styles.navbar}>
@@ -17,7 +18,7 @@ const Hero = () => {
             Bi-Monthly Magazine
           </h1>
         </div>
-        <Cover uri='https://cdn.heyzine.com/flip-book/pdf/b12222099edfc453566ffd82a66cd9ab7411d8e9.pdf' pathString='4.png' />
+        <Cover uri={cdnLink} pathString='4.png' />
       </div>
     </div>
   )
