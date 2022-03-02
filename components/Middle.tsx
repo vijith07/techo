@@ -26,10 +26,10 @@ const Middle = () => {
         The bi-monthly magazine is finally out with its second edition to kick start your Monday with the inspiration and passion we share at Technovert. We appreciate all the response and support we got for this edition. We hope we get to sing more stories and witness all our fellow talent with every growing edition. Our special thanks to the marketing team - Rahul Sudeep, Ankita Joshi, Mayank Khanna, Venkata Chalam for your volunteer and passionate efforts! 🙌  
       </Issue>
       <Issue edition={'1'} uri={cdnLinks[2]}>
-        We have a lot of exciting things to share and they're all about our journey together as one big family. The magazine will remind you that each of us is telling the tale of Technovert in our own special way. The magazine will reach you on the last week of every second month. We hope you'll join us in this journey and we hope you'll be inspired to take the next step in your journey.
+        We have a lot of exciting things to share and they are all about our journey together as one big family. The magazine will remind you that each of us is telling the tale of Technovert in our own special way. The magazine will reach you on the last week of every second month. We hope you will join us in this journey and we hope you will be inspired to take the next step in your journey.
       </Issue>
       <Issue edition={'1'} uri={cdnLinks[1]}>
-        We have a lot of exciting things to share and they're all about our journey together as one big family. The magazine will remind you that each of us is telling the tale of Technovert in our own special way. The magazine will reach you on the last week of every second month. We hope you'll join us in this journey and we hope you'll be inspired to take the next step in your journey.
+        We have a lot of exciting things to share and they are all about our journey together as one big family. The magazine will remind you that each of us is telling the tale of Technovert in our own special way. The magazine will reach you on the last week of every second month. We hope you will join us in this journey and we hope you will be inspired to take the next step in your journey.
       </Issue>
       </div>
     </div>
